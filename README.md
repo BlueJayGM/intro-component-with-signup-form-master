@@ -43,4 +43,4 @@ Users should be able to:
 - CSS Grid
 
 ## Author
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/BlueJayGM)
+- Frontend Mentor - [@BlueJayGM](https://www.frontendmentor.io/profile/BlueJayGM)
