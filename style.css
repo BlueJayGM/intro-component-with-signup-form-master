@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --white: #fff;
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 112.5%;
+}
+
+body {
+  position: relative;
+  background: url("./images/bg-intro-desktop.png") var(--red) no-repeat center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  height: 2.8rem;
+  border-radius: .6rem;
+}
+
+input {
+  height: 2.8rem;
+  border: 2px solid var(--grayish-blue);
+  border-radius: 0.28rem;
+  padding: 1.1rem 1.6rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.9rem;
+  color: black;
+  font-weight: 700;
+}
+input:hover {
+  border: 2px solid var(--blue);
+}
+
+input::placeholder {
+  font-weight: 700;
+}
+
+.container {
+  width: 80%;
+  max-width: 980px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  flex: 1;
+  color: var(--white);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: .8rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.bnt-card {
+  box-shadow: 0 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.1rem;
+  font-size: .8rem;
+  background: var(--blue);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.bnt-card span {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.card-form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-form .form-element {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 2.2rem;
+
+  border-radius: 0.55rem;
+}
+
+.form-element p {
+  font-size: .6rem;
+  font-weight: 600;
+  color: var(--grayish-blue);
+  text-align: center;
+}
+
+.form-element p span {
+  font-weight: 700;
+  color: var(--red);
+}
+
+#bnt-confirm {
+  text-align: center;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.55rem;
+  border-radius: 0.28rem;
+
+  box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  padding: 0.55rem;
+}
+
+@media screen and (max-width:1024px) {
+  html, body {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  body {
+    background: url("./images/bg-intro-mobile.png") var(--red) no-repeat center;
+    align-items: initial;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    justify-content: initial;
+    align-items: initial;
+    margin-top: 50px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .bnt-card {
+    padding: 20px 80px;
+    height: 80px;
+  }
+
+  footer {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  input {
+    font-size: .8rem;
+  }
+}
